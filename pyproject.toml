@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swiftfmri"
+version = "0.1.0"
+description = "SwiFT: Swin 4D fMRI Transformer"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "pytorch-lightning",
+    "torchmetrics",
+    "einops",
+    "monai",
+    "nibabel",
+    "nilearn",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "tqdm",
+    "pyyaml",
+    "neptune-client",
+    "pytest",
+]

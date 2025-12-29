@@ -8,11 +8,11 @@ from pytorch_lightning.loggers.neptune import NeptuneLogger
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 from pytorch_lightning.loggers.tensorboard import TensorBoardLogger
 
-# from module import LitClassifier
+# from swiftfmri import LitClassifier
 import neptune.new as neptune
-from module.utils.data_module import fMRIDataModule
-from module.utils.parser import str2bool
-from module.pl_classifier import LitClassifier
+from swiftfmri.utils.data_module import fMRIDataModule
+from swiftfmri.utils.parser import str2bool
+from swiftfmri.pl_classifier import LitClassifier
 
 
 def cli_main():
@@ -57,7 +57,7 @@ def cli_main():
 
     if temp_args.resume_ckpt_path is not None:
         # resume previous experiment
-        from module.utils.neptune_utils import get_prev_args
+        from swiftfmri.utils.neptune_utils import get_prev_args
         args = get_prev_args(args.resume_ckpt_path, args)
         exp_id = args.id
         # override max_epochs if you hope to prolong the training
