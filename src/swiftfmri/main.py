@@ -9,7 +9,7 @@ from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 from pytorch_lightning.loggers.tensorboard import TensorBoardLogger
 
 # from swiftfmri import LitClassifier
-import neptune.new as neptune
+import neptune
 from swiftfmri.utils.data_module import fMRIDataModule
 from swiftfmri.utils.parser import str2bool
 from swiftfmri.pl_classifier import LitClassifier
